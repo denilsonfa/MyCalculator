@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/cor_gradient"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:gravity="center"
+        android:background="@color/branco04"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_ico"
+            app:tint="@color/branco01"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:textColor="@color/branco02"
+            android:fontFamily="@font/g_light"
+            android:paddingStart="0dp"
+            android:paddingEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/g_light"
+            android:textColor="@color/branco01"
+            android:textSize="45sp"
+            android:paddingTop="30dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textAlignment="textEnd"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="@string/nada"/>
+
+        <TextView
+            android:id="@+id/text_expres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/g_light"
+            android:textColor="@color/branco02"
+            android:textSize="25sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textAlignment="textEnd"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="@string/nada"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/text_expresTmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/g_light"
+            android:textColor="@color/branco02"
+            android:textSize="25sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="30dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textAlignment="textEnd"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="@string/nada"
+            android:background="@color/brancoTmp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_mult"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/stl_btn_branco02"
+                android:fontFamily="@font/g_light"
+                android:textStyle="bold"
+                android:textColor="@color/branco03"
+                android:gravity="center"
+                android:text="@string/multi"
+                android:textSize="25sp"
+                android:layout_margin="1dp"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:id="@+id/btn_div"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/stl_btn_branco02"
+                android:fontFamily="@font/g_light"
+                android:textStyle="bold"
+                android:textColor="@color/branco03"
+                android:gravity="center"
+                android:text="@string/div"
+                android:textSize="25sp"
+                android:layout_margin="1dp"/>
+
+            <TextView
+                android:id="@+id/btn_soma"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/stl_btn_branco02"
+                android:fontFamily="@font/g_light"
+                android:textStyle="bold"
+                android:textColor="@color/branco03"
+                android:gravity="center"
+                android:text="@string/soma"
+                android:textSize="25sp"
+                android:layout_margin="1dp"/>
+
+            <TextView
+                android:id="@+id/btn_sub"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/stl_btn_branco02"
+                android:fontFamily="@font/g_light"
+                android:textStyle="bold"
+                android:textColor="@color/branco03"
+                android:gravity="center"
+                android:text="@string/sub"
+                android:textSize="25sp"
+                android:layout_margin="1dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights,UselessParent">
+
+                <TextView
+                    android:id="@+id/btn_num7"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:fontFamily="@font/g_light"
+                    android:textColor="@color/branco01"
+                    android:gravity="center"
+                    android:text="@string/num7"
+                    android:textSize="25sp"
+                    android:layout_margin="1dp"
+                    tools:ignore="NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn_num4"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:fontFamily="@font/g_light"
+                    android:textColor="@color/branco01"
+                    android:gravity="center"
+                    android:text="@string/num4"
+                    android:textSize="25sp"
+                    android:layout_margin="1dp"
+                    tools:ignore="NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn_num1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:fontFamily="@font/g_light"
+                    android:textColor="@color/branco01"
+                    android:gravity="center"
+                    android:text="@string/num1"
+                    android:textSize="25sp"
+                    android:layout_margin="1dp"
+                    tools:ignore="NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn_ponto"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:fontFamily="@font/g_light"
+                    android:textColor="@color/branco01"
+                    android:gravity="center"
+                    android:text="@string/ponto"
+                    android:textSize="25sp"
+                    android:layout_margin="1dp"
+                    tools:ignore="NestedWeights" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btn_num8"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:fontFamily="@font/g_light"
+                    android:textColor="@color/branco01"
+                    android:gravity="center"
+                    android:text="@string/num8"
+                    android:textSize="25sp"
+                    android:layout_margin="1dp"
+                    tools:ignore="NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn_num5"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:fontFamily="@font/g_light"
+                    android:textColor="@color/branco01"
+                    android:gravity="center"
+                    android:text="@string/num5"
+                    android:textSize="25sp"
+                    android:layout_margin="1dp"/>
+
+                <TextView
+                    android:id="@+id/btn_num2"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:fontFamily="@font/g_light"
+                    android:textColor="@color/branco01"
+                    android:gravity="center"
+                    android:text="@string/num2"
+                    android:textSize="25sp"
+                    android:layout_margin="1dp"/>
+
+                <TextView
+                    android:id="@+id/btn_num0"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:fontFamily="@font/g_light"
+                    android:textColor="@color/branco01"
+                    android:gravity="center"
+                    android:text="@string/num0"
+                    android:textSize="25sp"
+                    android:layout_margin="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btn_num9"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:fontFamily="@font/g_light"
+                    android:textColor="@color/branco01"
+                    android:gravity="center"
+                    android:text="@string/num9"
+                    android:textSize="25sp"
+                    android:layout_margin="1dp"
+                    tools:ignore="NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn_num6"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:fontFamily="@font/g_light"
+                    android:textColor="@color/branco01"
+                    android:gravity="center"
+                    android:text="@string/num6"
+                    android:textSize="25sp"
+                    android:layout_margin="1dp"/>
+
+                <TextView
+                    android:id="@+id/btn_num3"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:fontFamily="@font/g_light"
+                    android:textColor="@color/branco01"
+                    android:gravity="center"
+                    android:text="@string/num3"
+                    android:textSize="25sp"
+                    android:layout_margin="1dp"/>
+
+                <LinearLayout
+                    android:id="@+id/btn_apagar"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco01"
+                    android:gravity="center"
+                    android:layout_margin="1dp"
+                    android:orientation="horizontal"
+                    android:padding="35dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_back"
+                        app:tint="@color/branco01"
+                        android:contentDescription="@string/apagar" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btn_limpar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco02"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/g_light"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/limpar"
+                    android:textColor="@color/branco03"
+                    android:textSize="25sp"
+                    tools:ignore="NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn_result"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stl_btn_branco03"
+                    android:fontFamily="@font/g_light"
+                    android:textStyle="bold"
+                    android:textColor="@color/branco02"
+                    android:gravity="center"
+                    android:text="@string/result"
+                    android:textSize="40sp"
+                    android:layout_margin="1dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

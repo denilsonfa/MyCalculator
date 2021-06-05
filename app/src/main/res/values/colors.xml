@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cor Sistema -->
+    <color name="colorPrimary">#37474F</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="textColorPrimary">#FFF</color>
+    <color name="colorAccent">#FFF</color>
+    <color name="windowBackground">#212121</color>
+    <color name="statusBar">#212121</color>
+    <color name="navigationBarColor">#212121</color>
+    <color name="colorText">#ddd</color>
+
+    <color name="branco01">#ffff</color>
+    <color name="branco02">#bfff</color>
+    <color name="branco03">#7fff</color>
+    <color name="branco04">#3fff</color>
+    <color name="branco05">#0fff</color>
+
+    <color name="brancoTmp">#1fff</color>
+
+</resources>

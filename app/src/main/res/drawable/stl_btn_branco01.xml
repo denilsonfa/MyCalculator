@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="50"
+    android:exitFadeDuration="200">
+    <!-- customização para os botões, definindo tempo de inicio e de saida de cada customização -->
+
+    <!-- quando item precionado -->
+    <item android:drawable="@drawable/stl_btn_branco01_selec" android:state_pressed="true"/>
+    <!-- quando item em foco-->
+    <item android:drawable="@drawable/stl_btn_branco01_selec" android:state_focused="true"/>
+    <!-- quando item item ativo ou não-->
+    <item android:drawable="@drawable/stl_btn_branco01_chek" android:state_enabled="false"/>
+    <!-- quando item em seu estado normal-->
+    <item android:drawable="@drawable/stl_btn_branco01_nor"/>
+
+</selector>
